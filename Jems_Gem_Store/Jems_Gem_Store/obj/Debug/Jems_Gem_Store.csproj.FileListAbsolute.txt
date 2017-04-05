@@ -64,6 +64,6 @@ C:\Users\black\Desktop\Jems_Truly_Outrgious_Gem_Store\Jems_Gem_Store\Jems_Gem_St
 C:\Users\black\Desktop\Jems_Truly_Outrgious_Gem_Store\Jems_Gem_Store\Jems_Gem_Store\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\black\Desktop\Jems_Truly_Outrgious_Gem_Store\Jems_Gem_Store\Jems_Gem_Store\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\black\Desktop\Jems_Truly_Outrgious_Gem_Store\Jems_Gem_Store\Jems_Gem_Store\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\black\Desktop\Jems_Truly_Outrgious_Gem_Store\Jems_Gem_Store\Jems_Gem_Store\obj\Debug\Jems_Gem_Store.csprojResolveAssemblyReference.cache
 C:\Users\black\Desktop\Jems_Truly_Outrgious_Gem_Store\Jems_Gem_Store\Jems_Gem_Store\obj\Debug\Jems_Gem_Store.dll
 C:\Users\black\Desktop\Jems_Truly_Outrgious_Gem_Store\Jems_Gem_Store\Jems_Gem_Store\obj\Debug\Jems_Gem_Store.pdb
-C:\Users\black\Desktop\Jems_Truly_Outrgious_Gem_Store\Jems_Gem_Store\Jems_Gem_Store\obj\Debug\Jems_Gem_Store.csprojResolveAssemblyReference.cache

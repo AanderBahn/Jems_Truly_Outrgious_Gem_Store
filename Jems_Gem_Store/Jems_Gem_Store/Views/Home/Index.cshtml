@@ -8,12 +8,26 @@
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
-<div class="row" ng-controller="StoreController as store">
-    <div class="col-lg-12" ng-repeat="good in store.goods">
+<div class="row">
+    <div class="col-lg-12" ng-repeat="good in store.goods | orderBy:'-price'">
         <h1>{{good.name}}</h1>
-        <h2>{{good.price}}</h2>
+        <h2>{{good.price | currency}}</h2>
+        <img ng-src="{{good.images[0].full}}"/>
         <p> {{good.description}}</p>
         <button ng-hide="good.soldOut">Add to cart</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+     <ul class="list-group">
+      <li class="list-group-item" ng-repeat="good in store.goods | orderBy:'price'">
+       <h3>{{good.name}} <em class="pull-right">{{good.price | currency }}</em></h3>
+       <img ng-src="{{good.images[0].full}}" />
+       <p>{{good.description}}</p>
+       <button ng-hide="good.soldOut">Add to cart</button>
+      </li>
+     </ul>
     </div>
 </div>
 
