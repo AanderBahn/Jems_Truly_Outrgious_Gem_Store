@@ -59,27 +59,35 @@
                       <cite>by: {{review.author}}</cite>
                   </blockquote>
 
-                  <form name="reviewForm">
+                  <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+                        ng-submit="reviewCtrl.addReview(product)">
                       @* //Live preview// *@
                       <blockquote>
-                          <b>Stars: {{review.stars}}</b>
-                          {{review.body}}
-                          <cite>by: {{review.author}}</cite>
+                          <b>Stars: {{reviewCtrl.review.stars}}</b>
+                          {{reviewCtrl.review.body}}
+                          <cite>{{reviewCtrl.review.color}}</cite>
+                          <cite>by: {{reviewCtrl.review.author}}</cite>
                       </blockquote>
 
                       @* //Star Rate it// *@
-                      <select>
+                      <select ng-model="reviewCtrl.review.stars">
                           <option value="1">1 Star</option>
                           <option value="2">2 Stars</option>
                           <option value="3">3 Stars</option>
                           <option value="4">4 Stars</option>
                           <option value="5">5 Stars</option>
                       </select>
+                      @* //Favorite Coloe// *@
+                      <input ng-model="reviewCtrl.review.color" type="radio" value="red"   /> Red
+                      <input ng-model="reviewCtrl.review.color" type="radio" value="blue"  /> Blue
+                      <input ng-model="reviewCtrl.review.color" type="radio" value="green" /> Green
                       @* //The text of your review// *@
-                      <textarea></textarea>
+                      <textarea ng-model="reviewCtrl.review.body"></textarea>
                       <label>By: </label>
                       @* //Email as Alias// *@
-                      <input type="email"/>
+                      <input ng-model="reviewCtrl.review.author" type="email"/>
+                      @* //Terms and conditions// *@
+                      <input ng-model="reviewCtrl.review.terms" type="checkbox"/> I agree to terms and conditions
                       <input type="submit" value="Submit"/>
                   </form>
 

@@ -31,12 +31,14 @@
             {
                 stars: 5,
                 body: "This is so rad!!!",
-                author: "bob@gmail.com"
+                author: "bob@gmail.com",
+                color: "Red"
             },
             {
                 stars: 1,
                 body: "Kinda...Meh. D20 is where its at",
-                author: "larry@gmail.com"
+                author: "larry@gmail.com",
+                color: "Green"
             },
         ]
     },
@@ -78,5 +80,17 @@
         };
 
     });///End of the Panel Controller
+
+    //the Review Controller
+    app.controller("ReviewController", function () {
+        this.review = {};
+
+        //to enable to actually add the review
+        this.addReview = function (product) {
+            product.reviews.push(this.review);
+            //This is what clears out the form once submitted
+            this.review = {};
+        };
+    });//End of Review Controller//
 
 })();
