@@ -60,7 +60,7 @@
                   </blockquote>
 
                   <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
-                        ng-submit="reviewCtrl.addReview(product)">
+                        ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
                       @* //Live preview// *@
                       <blockquote>
                           <b>Stars: {{reviewCtrl.review.stars}}</b>
@@ -70,7 +70,7 @@
                       </blockquote>
 
                       @* //Star Rate it// *@
-                      <select ng-model="reviewCtrl.review.stars">
+                      <select ng-model="reviewCtrl.review.stars" required>
                           <option value="1">1 Star</option>
                           <option value="2">2 Stars</option>
                           <option value="3">3 Stars</option>
@@ -82,12 +82,13 @@
                       <input ng-model="reviewCtrl.review.color" type="radio" value="blue"  /> Blue
                       <input ng-model="reviewCtrl.review.color" type="radio" value="green" /> Green
                       @* //The text of your review// *@
-                      <textarea ng-model="reviewCtrl.review.body"></textarea>
+                      <textarea ng-model="reviewCtrl.review.body" required></textarea>
                       <label>By: </label>
                       @* //Email as Alias// *@
-                      <input ng-model="reviewCtrl.review.author" type="email"/>
+                      <input ng-model="reviewCtrl.review.author" required type="email"/>
                       @* //Terms and conditions// *@
-                      <input ng-model="reviewCtrl.review.terms" type="checkbox"/> I agree to terms and conditions
+                      <input ng-model="reviewCtrl.review.terms" required type="checkbox"/> I agree to terms and conditions
+                      <div>reviewForm is {{reviewForm.$valid}}</div>
                       <input type="submit" value="Submit"/>
                   </form>
 
